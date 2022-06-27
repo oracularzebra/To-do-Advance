@@ -12,8 +12,10 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
+    "build:css": "postcss src/tailwiind.css -o output.css",
+    "watch:css": "postcss src/tailwiind.css -o output.css -w",
+    "start": "npm run watch:css & react-script start",
+    "build": "react-scripts build && react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
